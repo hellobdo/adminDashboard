@@ -1,0 +1,343 @@
+@font-face {
+  font-family: 'myFont';
+  src: url('assets/fonts/Roboto-VariableFont_wdth\,wght.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'myFont';
+  }
+  
+  .container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  
+  .container div {
+    font-weight: bold;
+  }
+  
+  .header {
+    background-color: white;
+    display: grid;
+    grid-column: 2;
+    grid-template-columns: 4fr 2fr;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    gap: 16px;
+  }
+  
+  .sidebar {
+    background-color: rgb(0, 152, 247);
+    display: grid;
+    align-items: center;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    padding-right: 30px;
+    grid-template-rows: 1fr 3fr 3fr 3fr;
+    color: white;
+  }
+  
+  .hero {
+    padding-top: 20px;
+    padding-left: 40px;
+    background-color:rgb(206, 206, 206);
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 3fr 1fr;
+    grid-column: 2;
+    grid-row: 2 / span 3;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 6px;
+  }
+  
+  .card p {
+    color: grey;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .card .title {
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+    color:black;
+  }
+
+  .card {
+    background-color: #FFFFFF;
+    color: black;
+    text-align: center;
+    height: 160px;
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;            /* Rounded corners */
+    border-left: 5px solid orange;  /* Orange border on the left */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    margin: 10px;
+    display: grid;
+    grid-template-rows: 1fr 3fr 0.2fr;
+  }
+  
+  
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    align-self: start;
+    padding-top: 10px;
+    font-size: 22px;
+    align-items: center;
+    padding-left: 10px;
+    row-gap: 20px;
+    padding-bottom: 30px;
+}
+
+.dashboardLogo {
+    width: 60px;
+    height: 60px;
+    padding-right: 10px;
+}
+
+.dashboardFirstMenu, .dashboardSecondMenu {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    align-self: start;
+    gap:10px;
+    align-items: center;
+}
+
+.dashboardFirstMenu img, .dashboardSecondMenu img {
+    width: 24px;
+    height: 24px;
+    padding-left: 30px;
+}
+
+.dashboardFirstMenu {
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.dashboardSecondMenu {
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.sidebarText {
+    text-align: left;
+}
+
+.searchLogo {
+    width: 24px;
+    height: 24px;
+    padding-left: 30px;
+}
+
+.searchBox { 
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    align-items: center;
+}
+
+.searchInput {
+    border: none;
+    outline: none;
+    width: 80%;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 20px;
+    margin-right: 10px; /* Space between input and button */
+    background-color: gray;
+    padding-left: 20px;
+  }
+
+  .searchInput::placeholder {
+    color: black; /* Make placeholder text black */
+  }
+
+  .searchInput:focus::placeholder {
+    opacity: 0; /* Hide the placeholder text */
+  }
+
+  .userLogo {
+    width: 40px;
+    height: 40px;
+    padding-left: 30px;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    align-items: start;
+}
+
+.userText {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    text-align: left;
+    padding-left: 20px;
+    gap: 3px;
+}
+
+#smallText {
+    font-size: small;
+}
+
+.headerRightBottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-right: 24px;
+}
+
+.headerRightTop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    align-items: center;
+}
+
+.notificationsLogo {
+    width: 20px;
+    height: 20px;
+    justify-self: end;
+    padding: 20px;
+}
+
+.userLogoTopRight {
+    width: 40px;
+    height: 40px;
+}
+
+.userNameTopRight {
+    text-align: left;
+}
+
+button {
+    background-color: rgb(0, 152, 247);
+    color: white;                 /* White text */
+    font-size: 12px;              /* Adjust the font size */
+    padding: 10px 20px; /* Padding for the button (top-bottom, left-right) */
+    border: none;                 /* Remove the border */
+    border-radius: 25px;          /* Rounded corners */
+    cursor: pointer;             /* Change the cursor to a pointer on hover */
+    transition: background-color 0.3s ease;
+    height: 80%;
+    width: 100%;
+    align-self: center;
+    display: flex;                /* Use flexbox */
+    justify-content: center;      /* Center horizontally */
+    align-items: center;   
+}
+
+button:hover {
+    background-color: darkblue;  /* Darker blue when hovered */
+}
+
+.card > div > img {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
+
+.card > div {
+    justify-self: end;
+}
+
+.heroRight {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.announcementCards {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.userCard, .announcementCard {
+    background-color: #FFFFFF;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;            /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    text-align: left;
+}
+
+.announcementCard p {
+    color: gray;
+    font-weight: normal;
+    font-size: 10px;
+    text-align: left;
+  }
+  
+  .heroRight .title {
+    font-size: 14px;
+    text-align: left;
+    font-weight: bold;
+    color: black;
+  }
+
+  #middle {
+    border-top: 0.1px solid rgba(0, 0, 0, 0.1);  /* Standard visible top border */
+    border-bottom: 0.3px solid rgba(0, 0, 0, 0.1); /* Standard visible bottom border */
+    border-radius: 0px;
+  }
+
+  #top {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  #bottom {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  .trendingCards {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#heroSectionsTitle {
+    text-align: left;
+}
+
+.announcementCard {
+    height: 80px;
+    width: 200px;
+}
+
+.userCard {
+    height: 36px;
+    width: 200px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+
+#trendingUserLogo {
+    padding: 0;
+    align-self: center;
+}
+
+.userText > p {
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+#description {
+    color: gray;
+}
+
+.userNameMain {
+    font-size: 24px;
+    font-weight: bold;
+}
